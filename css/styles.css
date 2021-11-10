@@ -1,0 +1,118 @@
+:root {
+    --heading-font: 'Yellowtail', cursive;
+    --body-font:  'Open Sans', sans-serif;
+    --charcoal: #1e1e1e;
+    --med-brown: ##330F10;
+    --red-orange: #ff4e50;
+    --yellow: #f9d423;
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: 300;
+    color: var(--charcoal);
+    background-color: #f2f2f2;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--med-brown);
+}
+
+h1{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+svg {
+    width: 2rem;
+    margin-right: 0.5rem;
+    color: #F9D423;
+}
+
+/** header **/
+header {
+    background: #fff;
+    box-shadow:1px 1px 2px #333;
+}
+
+.logo {
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #ff4e50;
+    
+}
+
+/** nav **/
+ul.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+ul.menu a {
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    color: #ff4e50;
+}
+
+ul.menu a:hover {
+    color: var(--med-brown);
+}
+
+
+.inner-container { 
+    padding: 1rem;
+}
+
+
+
+@media screen and (min-width: 700px) {
+    header .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul.menu li {
+        margin-left: 1.25rem;
+    }
+
+ 
+
+}
+
+@media screen and (min-width: 990px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+}
+
+
+@media screen and (min-width: 1400px) {
+    .inner-container {
+        margin: auto;
+        max-width: 1350px;
+    }
+}
