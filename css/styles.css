@@ -2,7 +2,7 @@
     --heading-font: 'Yellowtail', cursive;
     --body-font:  'Open Sans', sans-serif;
     --charcoal: #1e1e1e;
-    --med-brown: ##330F10;
+    --med-brown: #330F10;
     --red-orange: #ff4e50;
     --yellow: #f9d423;
 }
@@ -29,6 +29,20 @@ h1{
 
 h2 {
     font-size: 2.25rem;
+    color: var(--red-orange);
+    line-height: 1;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: '';
+    border-bottom: 2px solid var(--med-brown);
+    display: block;
+    width: 95%;
+    height: 1rem;
+    position: relative;
+    left: 5%;
 }
 
 p {
@@ -80,10 +94,140 @@ ul.menu a:hover {
     color: var(--med-brown);
 }
 
-
+/* structure **/
 .inner-container { 
     padding: 1rem;
 }
+.col {
+    margin: 3rem 0;
+}
+
+/** banner **/
+.banner {
+    background: linear-gradient( -148deg, var(--red-orange), var(--yellow));
+    padding: 3rem; /**48px **/
+    text-align: center;
+}
+.banner-content h1 {
+    padding-bottom: 1.5rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--red-orange);
+    
+}
+.banner-content p {
+    font-size:1.3125rem;
+    text-transform: uppercase;
+
+}
+
+/** join today cta section **/
+.join-today {
+    border: 2px solid var(--red-orange);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.join-today ul {
+    margin-top: 1rem;
+}
+.join-today ul li {
+    margin-bottom: 1rem;
+}
+.join-today ul li::before {
+    content: '';
+    border-left: 1rem solid var(--red-orange);
+    width: 1rem;
+    display: inline-block;
+    height: 3px;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+}
+
+/** Form Styling Structure **/
+form {}
+form div {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.1875rem; /**3px **/
+}
+
+input {
+    width: 100%;
+    border: 0.125rem solid var(--med-brown);
+    border-radius: 0.1875rem;
+    padding-left: 1rem; /** allows the starting point in the form not to start at the very edge. Also shifts over the placeholder value **/
+    line-height: 2.5rem; /** increase the height of the form input */
+    color: var(--med-brown);
+}
+
+::placeholder {
+    color: var(--med-brown);
+    font-size: 0.875rem;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none; 
+}
+
+fieldset div {
+    margin-bottom: 1rem;
+}
+
+input[type=checkbox] {
+    width: auto; /** width: initial*/
+}
+
+/** place your labels beside the checkboxes, we need to put our labels back to their original state of inline or inline-block **/
+label[for="design"],
+label[for="web-dev"],
+label[for="illustration"],
+label[for="game-dev"] { 
+    display: inline-block;
+}
+
+input[type=submit] {
+    background: linear-gradient(
+        to right,
+        #ff4e50 0%,
+        #f9d423 51%,
+        #ffe450 100%
+    );
+    background-size: 200%;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--med-brown);
+    transition: background 0.3s ease-in-out;
+    border: none; 
+}
+
+input[type=submit]:hover {
+  background-position: right center;  
+}
+form h4 {
+    font-size: 1.125rem; /*18*/
+    margin-bottom: 0.5rem;
+}
+
+/** hint **/
+.hint {
+    display: inline-block;
+    margin-top: 0.1875rem;
+    font-style: italic;
+    font-size: 0.875rem; /*14px*/
+}
+
+
 
 
 
@@ -96,6 +240,24 @@ ul.menu a:hover {
     ul.menu li {
         margin-left: 1.25rem;
     }
+
+    /** layout the first and last name form elements side by side **/
+
+    /** only targeting the flex class within the form **/
+    form .flex {
+        display: flex;
+        gap: 2%;
+        /** remove the extra margin-bottom **/
+        margin-bottom: 0;
+    }
+
+    form .flex div {
+        flex-basis: 100%;
+    }
+
+    /** interests **/
+    
+   
 
  
 

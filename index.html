@@ -40,9 +40,9 @@
             </div>
             <!-- two column layout -->
             <section>
-                <div class="inner-container">
+                <div class="inner-container flex">
                     <!-- column 1-->
-                    <div class="col-1">
+                    <div class="col join-today">
                         <h2>Join Today - Get 1 Month Free</h2>
                         <ul>
                             <li>Get unlimited access to thousands of inspiring classes</li>
@@ -51,21 +51,23 @@
                         </ul>
                     </div>
                     <!-- column 2-->
-                    <div>
-                        To sign-up, please fill out the form below and we will be in touch shortly.
-                    </div>
-                    <form>
+                    <form class="col" action="#" method="POST">
+                        <p>To sign-up, please fill out the form below and we will be in touch shortly.</p>
                         <!-- signup form might include: first name & last, email, interests, password, submit, email subscription -->
-                        <div>
-                            <!-- first name -->
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="fname" placeholder="First Name"/>
+                       <!-- group first and last name together so at med and large screens they will sit side-by-side -->
+                        <div class="flex">
+                            <div>
+                                <!-- first name -->
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="fname" placeholder="First Name"/>
+                            </div>
+                            <div>
+                                <!-- Last name -->
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lname" placeholder="Last Name"/>
+                            </div>
                         </div>
-                        <div>
-                            <!-- Last name -->
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lname" placeholder="Last Name"/>
-                        </div>
+
                         <div>
                             <!-- email -->
                             <label for="email">Email Address</label>
@@ -77,7 +79,7 @@
                             <input type="password" id="pass" name="pass" placeholder="Create Password"/>
                             <span class="hint">Password should be at least 8 characters long</span>
                         </div>
-                        <fieldset>
+                        <fieldset class="flex">
                             <h4>Interests</h4>
                             <div>
                                 <input type="checkbox" name="interests" id="design"/>
