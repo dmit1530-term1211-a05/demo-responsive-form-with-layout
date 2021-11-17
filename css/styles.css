@@ -126,6 +126,7 @@ ul.menu a:hover {
     border: 2px solid var(--red-orange);
     border-radius: 0.5rem;
     padding: 2rem;
+    text-align: center;
 }
 ul {
     padding: 0;
@@ -150,7 +151,7 @@ ul {
 }
 
 /** Form Styling Structure **/
-form {}
+
 form div {
     margin-bottom: 1.25rem;
 }
@@ -254,12 +255,18 @@ form h4 {
     form .flex div {
         flex-basis: 100%;
     }
+    form .flex h4 {
+        flex-basis: 100%;
+    }
 
     /** interests **/
-    
-   
-
- 
+    fieldset .flex  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    fieldset .flex > div {
+        flex-basis: 48%;
+    }
 
 }
 
@@ -267,6 +274,11 @@ form h4 {
     .flex-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .col { 
+        width: 48%;
     }
    
 }
